@@ -14,7 +14,7 @@ function RowPost(props) {
         }).catch(error=>{
             console.log(error);
         })
-    },[])
+    },[props.url])
     const opts = {
         height: '450',
         width: '100%',
