@@ -7,6 +7,7 @@ import axios from '../../axios'
 function RowPost(props) {
     const [movies, setMovies] = useState([])
     const [urlid ,setUrlId]=useState('')
+    /* eslint-disable */
     useEffect(() => {
         axios.get(props.url).then(response=>{
             console.log(response)
@@ -14,7 +15,8 @@ function RowPost(props) {
         }).catch(error=>{
             console.log(error);
         })
-    },[props.url])
+    },[])
+    /* eslint-enable */
     const opts = {
         height: '450',
         width: '100%',
